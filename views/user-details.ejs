@@ -1,0 +1,169 @@
+<%- include('partials/header') %> 
+<link rel="stylesheet" href="assets/vendors/core/core.css">
+
+<link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+
+<link rel="stylesheet" href="assets/fonts/feather-font/css/iconfont.css">
+
+<link rel="stylesheet" href="./assets/scss/style.css">
+
+<link rel="shortcut icon" href="assets/images/favicon.png" />
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <%- include('partials/sidebar') %> 
+
+        <div class="page-wrapper">
+
+            <%- include('partials/navbar') %> 
+
+            <div class="page-content">
+
+                <nav class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="user">User Table</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">User Details</li>
+                    </ol>
+                </nav>
+                <div class="row">
+                    <div class="col-md-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">User Details</h6>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <b>User ID</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.id %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Name</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.username %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Email</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.email %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Mobile</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.mobile_no %>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <b>Position</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.position %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Start Date</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.starting_date %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Salary</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.salary %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Address</b>
+                                                    </td>
+                                                    <td>
+                                                        <%= users.address %>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="card-button" style="text-align: right; margin-top: 10px;">
+                                            <a href="edit?userId=<%= users.id  %>"
+                                             class="button button2" 
+                                             style="background-color: #727cf5;
+                                             border: none;
+                                             color: white;
+                                             padding: 3px 20px;
+                                             text-align: center;
+                                             text-decoration: none;
+                                             display: inline-block;
+                                             font-size: 18px;
+                                             border-radius: 2px;
+                                             margin: 4px 2px;
+                                             cursor: pointer;">Edit</a>
+                                             <a href="delete?userId=<%= users.id  %>"
+                                             class="button button2" 
+                                             style="background-color: #727cf5;
+                                             border: none;
+                                             color: white;
+                                             padding: 3px 20px;
+                                             text-align: center;
+                                             text-decoration: none;
+                                             display: inline-block;
+                                             border-radius: 2px;
+                                             font-size: 18px;
+                                             margin: 4px 2px;
+                                             cursor: pointer;" >Delete</a>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+            </div>
+
+            <%- include('partials/footer') %> 
+        </div>
+    </div>
+
+ <!-- core:js -->
+ <script src="assets/vendors/core/core.js"></script>
+ <!-- endinject -->
+ <!-- plugin js for this page -->
+ <script src="assets/vendors/datatables.net/jquery.dataTables.js"></script>3
+ <script src="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>2
+ <!-- end plugin js for this page -->
+ <!-- inject:js -->
+ <script src="assets/vendors/feather-icons/feather.min.js"></script>
+ <script src="assets/js/template.js"></script>
+ <!-- endinject -->
+ <!-- custom js for this page -->
+ <script src="assets/js/data-table.js"></script>1
+ <!-- end custom js for this page -->
+</body>
+</html>

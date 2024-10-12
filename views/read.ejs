@@ -1,0 +1,230 @@
+<%- include('partials/header') %> 
+
+    <link rel="stylesheet" href="assets/vendors/core/core.css">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+
+    <link rel="stylesheet" href="assets/css/iconfont.css">
+    <!-- endinject -->
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/simplemde/simplemde.min.css">
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="sidebar-brand">
+          Qrious<span>Tech</span>
+        </a>
+                <div class="sidebar-toggler not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="sidebar-body">
+                <ul class="nav">
+                    <!-- <li class="nav-item nav-category">Main</li> -->
+                    <li class="nav-item">
+                        <a href="index" class="nav-link">
+                            <i class="link-icon" data-feather="box"></i>
+                            <span class="link-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user">
+                            <i class="link-icon" data-feather="user"></i>
+                            <span class="link-title">User</span>
+                            <!-- <i class="link-arrow" data-feather="chevron-down"></i> -->
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="email">
+                            <i class="link-icon" data-feather="mail"></i>
+                            <span class="link-title">Email</span>
+                            <!-- <i class="link-arrow" data-feather="chevron-down"></i> -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chat">
+                            <i class="link-icon" data-feather="message-square"></i>
+                            <span class="link-title">Chat</span>
+                            <!-- <i class="link-arrow" data-feather="chevron-down"></i> -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
+                            <i class="link-icon" data-feather="settings"></i>
+                            <span class="link-title">Setting</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="emails">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="change-password" class="nav-link">Change Password</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="profile" class="nav-link">Profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="page-wrapper">
+
+            <%- include('partials/navbar') %> 
+            <div class="page-content">
+
+                <div class="row inbox-wrapper">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3 email-aside border-lg-right">
+                                        <div class="aside-content">
+                                            <!-- <div class="aside-header">
+                                                <button class="navbar-toggle" data-target=".aside-nav" data-toggle="collapse" type="button"><span class="icon"><i data-feather="chevron-down"></i></span></button><span class="title">Mail Service</span>
+                                                <p class="description">amiahburton@gmail.com</p>
+                                            </div> -->
+                                            <div class="aside-compose"><a class="btn btn-primary btn-block" href="compose-email">Compose Email</a></div>
+                                            <div class="aside-nav collapse">
+                                                <ul class="nav">
+                                                    <li class="active"><a href="email"><span class="icon"><i data-feather="inbox"></i></span>Inbox<span class="badge badge-danger-muted text-white font-weight-bold float-right">2</span></a></li>
+                                                    <li><a href="#"><span class="icon"><i data-feather="mail"></i></span>Sent Mail</a></li>
+                                                    <!-- <li><a href="#"><span class="icon"><i data-feather="briefcase"></i></span>Important<span class="badge badge-info-muted text-white font-weight-bold float-right">4</span></a></li>
+                                                    <li><a href="#"><span class="icon"><i data-feather="file"></i></span>Drafts</a></li>
+                                                    <li><a href="#"><span class="icon"><i data-feather="star"></i></span>Tags</a></li>
+                                                    <li><a href="#"><span class="icon"><i data-feather="trash"></i></span>Trash</a></li> -->
+                                                </ul>
+                                                <!-- <span class="title">Labels</span>
+                                                <ul class="nav nav-pills nav-stacked">
+                                                    <li>
+                                                        <a href="#"><i data-feather="tag" class="text-warning"></i> Important </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i data-feather="tag" class="text-primary"></i> Business </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"> <i data-feather="tag" class="text-info"></i> Inspiration </a>
+                                                    </li>
+                                                </ul> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 email-content">
+                                        <div class="email-head">
+                                            <div class="email-head-subject">
+                                                <div class="title d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center">
+                                                        <a class="active" href="#"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star text-primary-muted"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span></a>
+                                                        <span>New Project</span>
+                                                    </div>
+                                                    <div class="icons">
+                                                        <!-- <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share text-muted hover-primary-muted" data-toggle="tooltip" title="" data-original-title="Forward"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg></a> -->
+                                                        <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer text-muted" data-toggle="tooltip" title="" data-original-title="Print"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg></a>
+                                                        <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash text-muted" data-toggle="tooltip" title="" data-original-title="Delete"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="email-head-sender d-flex align-items-center justify-content-between flex-wrap">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar">
+                                                        <img src="assets/images/faces/face5.jpg" alt="Avatar" class="rounded-circle user-avatar-md">
+                                                    </div>
+                                                    <div class="sender d-flex align-items-center">
+                                                        <a href="#">John Doe</a> <span>to</span><a href="#">me</a>
+                                                        <div class="actions dropdown">
+                                                            <a class="icon" href="#" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                                                            <div class="dropdown-menu" role="menu">
+                                                                <a class="dropdown-item" href="#">Mark as read</a>
+                                                                <a class="dropdown-item" href="#">Mark as unread</a>
+                                                                <a class="dropdown-item" href="#">Spam</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="date">Nov 20, 11:20</div>
+                                            </div>
+                                        </div>
+                                        <div class="email-body">
+                                            <p>Hello,</p>
+                                            <br>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                                                dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                            <br>
+                                            <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+                                                sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
+                                                quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            <br>
+                                            <p><strong>Regards</strong>,<br> John Doe</p>
+                                        </div>
+                                        <div class="email-attachments">
+                                            <div class="title">Attachments <span>(3 files, 12,44 KB)</span></div>
+                                            <ul>
+                                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> Reference.zip <span class="text-muted tx-11">(5.10 MB)</span></a></li>
+                                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> Instructions.zip <span class="text-muted tx-11">(3.15 MB)</span></a></li>
+                                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> Team-list.pdf <span class="text-muted tx-11">(4.5 MB)</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <%- include('partials/footer') %> 
+
+        </div>
+    </div>
+
+    <!-- core:js -->
+    <script src="assets/vendors/core/core.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="assets/vendors/jquery.flot/jquery.flot.js"></script>
+    <script src="assets/vendors/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <!-- end plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/vendors/feather-icons/feather.min.js"></script>
+    <script src="assets/js/template.js"></script>
+    <!-- endinject -->
+    <!-- custom js for this page -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/apexcharts.js"></script>
+    <script src="assets/js/template.js"></script>
+    <script src="assets/vendors/select2/select2.min.js"></script>
+    <script src="assets/vendors/simplemde/simplemde.min.js"></script>
+    <script src="assets/js/email.js"></script>
+    <!-- end custom js for this page -->
+</body>
+
+
+</html>
