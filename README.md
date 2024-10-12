@@ -6,7 +6,6 @@ This is a Node.js-based admin panel project built using Express, EJS for templat
 
 ```bash
 Node admin panel
-├
 ├── controller/       # Controller files for handling logic
 ├── helper/           # Helper files for utilities
 ├── models/           # Database models
